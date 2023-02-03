@@ -9,3 +9,7 @@ Note: This applies when using SSH communications. The process will be slightly d
  - Hook `VtcTx` on the _ICD.CiscoAuthenticationHandler_ module to `SSH_CustomCommandToDevice`on the _Cisco Room Devices_ module
  - Pulse `SendSubscribe` on the module once the SSH session is connected. Recommended to add a delay to wait for the _Cisco Room Devices_ module to finish it's instantiation
  - Hook the inputs/outputs of the module to your UI
+ - For the keypad - the order of the buttons is designed to line up with the order when using the _Digital Press Start Join_ from a Simple Keypad in VTPro.
+   - `KeypadPress[n]` for n=1 through n=10 correspond to n - 1 - for example `KeypadPress[1]` is 0, and `KeypadPress[10]` is 9
+   - `KeypadPress[11]` is asterisk
+   - `KeypadPress[12]` is the number sign/hash symbol
